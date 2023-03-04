@@ -18,4 +18,5 @@ mongoose.connect(process.env.DATABASE_ACCESS,()=>console.log('Database is connec
 app.use('/',userRouter)
 app.use('/admin',adminRoute)
 
-app.listen(4001,()=>console.log("server is connected"))
+const port  = process.env.PORT || 4001;
+app.listen(port,()=>console.log("server is connected" + port))
